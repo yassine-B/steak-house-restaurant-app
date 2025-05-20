@@ -1,0 +1,114 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+  font-family: TIMESS__;
+  src: url('../../public/fonts/TIMESS__.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'Roboto-Regular';
+  src: url('../../public/fonts/Roboto-Regular.ttf') format('truetype');
+  font-weight: 400;
+}
+
+:root {
+  --primary-color: #a52a2a;
+  --accent-color: #e2e8f0;
+  --background-color: #f8f9fa;
+  --text-color: #212529;
+
+  --scrollbar_track: #a52a2a;
+  --scrollbar_thumb: #212529;
+}
+
+html {
+  background: var(--background-color);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+p,
+button {
+  font-family: Roboto-Regular;
+}
+h1,
+h2 {
+  font-family: TIMESS__;
+}
+p,
+h1,
+h2 {
+  color: var(--text-color);
+}
+p,
+h2 {
+  @apply text-gray-600;
+}
+/** tailwind css custom classNames  **/
+.overlay {
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0));
+}
+.transition-item {
+  @apply transition-all ease-in duration-200;
+}
+.bg-hero {
+  background: no-repeat url('../../public/images/hero_image.jpg');
+  @apply bg-cover bg-repeat-round;
+}
+.bg-reservation {
+  background: no-repeat url('../../public/images/reservation_image.jpg');
+  @apply bg-cover;
+}
+/* scrollbar styles */
+
+/* WebKit (Chrome, Safari) */
+body::-webkit-scrollbar,
+.scrollbar::-webkit-scrollbar {
+  width: 8px;
+}
+body::-webkit-scrollbar-track,
+.scrollbar::-webkit-scrollbar-track {
+  background: var(--scrollbar_track);
+}
+body::-webkit-scrollbar-thumb,
+.scrollbar::-webkit-scrollbar-thumb {
+  background: var(--scrollbar_thumb);
+  border-radius: 4px;
+  /* rounded corners for the thumb */
+}
+
+/* change the color of the thumb on hover */
+body::-webkit-scrollbar-thumb:hover,
+.scrollbar::-webkit-scrollbar-thumb:hover {
+  background: var(--scrollbar_thumb);
+  opacity: 0.8;
+}
+
+/* change the color of the thumb when dragging */
+body::-webkit-scrollbar-thumb:active,
+.scrollbar::-webkit-scrollbar-thumb:active {
+  background: var(--scrollbar_thumb);
+}
+
+body::-moz-scrollbar-thumb,
+.scrollbar::-moz-scrollbar-thumb {
+  background: var(--scrollbar_thumb);
+}
+
+/* change the color of the thumb on hover in Firefox */
+body::-moz-scrollbar-thumb:hover,
+.scrollbar::-moz-scrollbar-thumb:hover {
+  background: var(--scrollbar_thumb);
+  opacity: 0.8;
+}
+
+/* change the color of the thumb when dragging in Firefox */
+body::-moz-scrollbar-thumb:active,
+.scrollbar::-moz-scrollbar-thumb:active {
+  background: var(--scrollbar_thumb);
+}
